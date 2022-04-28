@@ -1,8 +1,6 @@
-name: GriefPrevention
-main: me.ryanhamshire.GriefPrevention.GriefPrevention
-softdepend: [Vault, Multiverse-Core, My Worlds, MystCraft, Transporter, TheUnderground, WorldGuard, WorldEdit, RoyalCommands, MultiWorld, Denizen]
-dev-url: http://dev.bukkit.org/server-mods/grief-prevention
-loadbefore: [TheUnderground]
+name: mPrevention
+main: cc.minestrike.mprevention.mPrevention
+softdepend: [Vault, Multiverse-Core, WorldGuard, WorldEdit]
 version: 15.2.2
 commands:
    abandonclaim:
