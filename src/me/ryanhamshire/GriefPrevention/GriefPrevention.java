@@ -1,22 +1,9 @@
 /*
     GriefPrevention Server Plugin for Minecraft
     Copyright (C) 2012 Ryan Hamshire
+*/
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-package me.ryanhamshire.GriefPrevention;
+package cc.minestrike.mprevention;
 
 import java.io.File;
 import java.io.IOException;
@@ -65,26 +52,15 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.BlockIterator;
 
-public class GriefPrevention extends JavaPlugin
-{
-	//for convenience, a reference to the instance of this plugin
+public class GriefPrevention extends JavaPlugin {
+	
 	public static GriefPrevention instance;
-	
-	//for logging to the console and log file
 	private static Logger log = Logger.getLogger("Minecraft");
-	
-	//this handles data storage, like player and region data
 	public DataStore dataStore;
 	
-	//this tracks item stacks expected to drop which will need protection
-    ArrayList<PendingItemProtection> pendingItemWatchList = new ArrayList<PendingItemProtection>();
-    
-    //log entry manager for GP's custom log files
-    CustomLogger customLogger;
+    	ArrayList<PendingItemProtection> pendingItemWatchList = new ArrayList<PendingItemProtection>();
+    	CustomLogger customLogger;
 	
-	//configuration variables, loaded/saved from a config.yml
-	
-	//claim mode for each world
 	public ConcurrentHashMap<World, ClaimsMode> config_claims_worldModes;   
 	private boolean config_creativeWorldsExist;                     //note on whether there are any creative mode worlds, to save cpu cycles on a common hash lookup
 	
